@@ -1,11 +1,15 @@
 import joblib
 import pandas as pd
+import numpy as np
 from sklearn.impute import SimpleImputer
-#from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.feature_selection import RFE
+
 
 
 def train():
@@ -27,7 +31,8 @@ def train():
         X, y, test_size=0.20, random_state=505
     )
 
-    # Impute missing values using SimpleImputer
+    
+   # Impute missing values using SimpleImputer
     imputer = SimpleImputer(strategy="mean")
     imputer.fit(X_train[num_features])
     X_train[num_features] = imputer.transform(X_train[num_features])
@@ -58,8 +63,10 @@ def train():
 
     print(f"Features: \n {X_train.columns.tolist()}")
 
+
     # Train the model
     #model = LinearRegression()
+    #model = GradientBoostingRegressor(random_state=505)
     model = RandomForestRegressor(n_estimators=100,max_depth=10,min_samples_split=2,min_samples_leaf=1,random_state=505)
     model.fit(X_train, y_train)
 
@@ -68,7 +75,7 @@ def train():
     test_score = r2_score(y_test, model.predict(X_test))
     print(f"Train R² score: {train_score}")
     print(f"Test R² score: {test_score}")
-
+    
     # Save the model
     artifacts = {
         "features": {
