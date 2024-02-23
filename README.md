@@ -1,4 +1,4 @@
-** Immo Eliza Machine Learning Model **
+**Immo Eliza Machine Learning Model**
 
 **Description**
 
@@ -23,7 +23,11 @@ To generate predictions:
 
 Predicitions are generated in predictions.csv file output folder.
  
-Contact Details mahakbehl@gmail.com
+**Contact Details** 
+
+mahakbehl@gmail.com
+
 Created on 23rd Feb 2024
+
 By Mahak Behl
 
