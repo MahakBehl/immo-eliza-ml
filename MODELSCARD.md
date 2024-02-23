@@ -51,7 +51,8 @@ Tried Random Forrest with different features combinations & multiple combination
 
 ## Limitations
 
-What are the limitations of your model?
+Using RandomForestRegressor when dealing with a large number of trees or a dataset with a large number of features, training and predicting with Random Forest models can take longer compared to simpler models.
+
 
 ## Usage
 
