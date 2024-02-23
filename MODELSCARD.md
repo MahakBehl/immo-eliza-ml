@@ -10,13 +10,13 @@ Input dataset = properties.csv in data folder
 
 Target variable = price
 
-Features ::
+Features: 
+    
+*Numerical Features*: total_area_sqm,surface_land_sqm,nbr_frontages,nbr_bedrooms,terrace_sqm,garden_sqm,primary_energy_consumption_sqm,cadastral_income
 
-    Numerical Features : total_area_sqm,surface_land_sqm,nbr_frontages,nbr_bedrooms,terrace_sqm,garden_sqm,primary_energy_consumption_sqm,cadastral_income
+*flag/Indicator features*: fl_furnished,fl_open_fire,fl_terrace,fl_garden,fl_swimming_pool,fl_floodzone,fl_double_glazing
     
-    flag/Indicator features : fl_furnished,fl_open_fire,fl_terrace,fl_garden,fl_swimming_pool,fl_floodzone,fl_double_glazing
-    
-    categorical features : property_type,subproperty_type,region,province,locality,equipped_kitchen,state_building,epc,heating_type
+*categorical features*: property_type,subproperty_type,region,province,locality,equipped_kitchen,state_building,epc,heating_type
 
 
 ## Model details
